@@ -13,6 +13,7 @@ from UI.keys_def  import CurKeys, IsKeyMenuOrB
 from UI.skin_manager import MySkinManager
 from UI.lang_manager import MyLangManager
 
+
 from libs.DBUS  import is_wifi_connected_now,get_wifi_ip
 
 class TinyCloudPage(Page):

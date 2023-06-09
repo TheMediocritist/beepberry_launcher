@@ -20,6 +20,7 @@ from UI.icon_item  import IconItem
 from UI.multi_icon_item import MultiIconItem
 from UI.lang_manager import MyLangManager
 
+
 from UI.multilabel import MultiLabel
 
 class AirplanePage(Page):
