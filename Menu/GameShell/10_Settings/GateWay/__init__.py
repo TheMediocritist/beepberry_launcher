@@ -2,7 +2,7 @@
 import os
 import pygame
 import platform
-import commands
+#import commands
 #import glob
 #from beeprint import pp
 from libs.roundrects import aa_round_rect
@@ -158,7 +158,7 @@ class GateWayPage(Page):
         
         cur_li = self._MyList[self._PsIndex]
         if cur_li._Active == True:
-            out = commands.getstatusoutput("sudo ip route | grep default | cut -d \" \" -f3")
+            out = ""#commands.getstatusoutput("sudo ip route | grep default | cut -d \" \" -f3")
             if len(out[1]) > 7:
                 self._Screen._MsgBox.SetText(out[1])
                 self._Screen._MsgBox.Draw()
@@ -201,7 +201,7 @@ class GateWayPage(Page):
     def ApplyGateWay(self,gateway):
         os.system("sudo ip route del 0/0")
         if gateway== "usb0":
-            out = commands.getstatusoutput("sudo ifconfig usb0 | grep inet | tr -s \" \"| cut -d \" \" -f3")
+            out = ""#commands.getstatusoutput("sudo ifconfig usb0 | grep inet | tr -s \" \"| cut -d \" \" -f3")
             if len(out[1]) > 7:
                 if "error" not in out[1]:
                     parts = out[1].split(".")
@@ -243,7 +243,7 @@ class GateWayPage(Page):
         thedrv = ""
         
         if "arm" in platform.machine():
-            out = commands.getstatusoutput("sudo ip route | grep default")
+            out = ""#commands.getstatusoutput("sudo ip route | grep default")
             if len(out[1]) > 7:
                 if "usb0" in out[1]:
                     thedrv = "usb0"

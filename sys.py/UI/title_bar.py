@@ -3,7 +3,7 @@
 import pygame
 import os
 import sys
-import commands
+#import commands
 
 from datetime import datetime
 
@@ -196,13 +196,13 @@ class TitleBar(Widget):
         pass
     
     def CheckBluetooth(self):
-        out = commands.getstatusoutput("hcitool dev | grep hci0 |cut -f3")
+        out = ""#commands.getstatusoutput("hcitool dev | grep hci0 |cut -f3")
         if len(out[1]) < 17:
             print("CheckBluetooth:no bluetooth", out)
             self._Icons["bluetooth"]._IconIndex = 2
             return
         else:
-            out = commands.getstatusoutput("sudo rfkill list | grep hci0 -A 2 | grep yes")
+            out = ""#commands.getstatusoutput("sudo rfkill list | grep hci0 -A 2 | grep yes")
             if len(out[1]) > 10:
                 self._Icons["bluetooth"]._IconIndex = 1
                 return
@@ -295,7 +295,7 @@ class TitleBar(Widget):
             print("wifi is connected")
             print( wifi_strength())
         else:
-            out = commands.getstatusoutput('sudo rfkill list | grep yes | cut -d " " -f3')
+            out = ""#commands.getstatusoutput('sudo rfkill list | grep yes | cut -d " " -f3')
             if out[1] == "yes":
                 self._InAirPlaneMode = True
             else:

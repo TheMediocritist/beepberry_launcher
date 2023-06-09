@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 import pygame
 import validators
-import  commands
+#import  commands
 
 from UI.constants import Width,Height,ICON_TYPES
 from UI.simple_name_space import SimpleNamespace
@@ -117,7 +117,7 @@ class TinyCloudPage(Page):
         else:
             self._IP = "xxx.xxx.xxx.xxx"
         
-        hostname = commands.getstatusoutput("hostname")[1]
+        hostname = ""#commands.getstatusoutput("hostname")[1]
         if hostname == "":
             hostname = "clockworkpi"
                     

@@ -22,7 +22,7 @@ use https://jsonlint.com/ to validate first in case syntax err
 import pygame
 #import validators
 import os
-import commands
+#import commands
 from UI.constants import Width,Height,ICON_TYPES,RUNEVT,RESTARTUI
 #from UI.simple_name_space import SimpleNamespace
 from UI.page  import Page
@@ -311,7 +311,7 @@ class MyCommercialSoftwarePackage(object):
                 #print(i,v)
                 if FileExists( os.path.join(json_config["GameDir"], v  )):
                     print( os.path.join(json_config["GameDir"],v  ))
-                    out = commands.getstatusoutput("md5sum %s" % os.path.join(json_config["GameDir"],v))
+                    out = ""#commands.getstatusoutput("md5sum %s" % os.path.join(json_config["GameDir"],v))
                     ret = out[1]
                     ret = ret.split(" ")
                     print(ret)
