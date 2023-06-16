@@ -3,7 +3,7 @@ import os
 import dbus
 import dbus.service
 import sys
-import commands
+#import commands
 import logging
 import errno
 
