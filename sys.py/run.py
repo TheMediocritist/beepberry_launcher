@@ -51,6 +51,8 @@ from UI.skin_manager import MySkinManager
 from libs.DBUS            import setup_dbus
 
 
+os.environ["DISPLAY"] = ":0"
+
 if not pygame.display.get_init():
     pygame.display.init()
 if not pygame.font.get_init():
