@@ -22,7 +22,7 @@ def get_git_revision_short_hash():
 
 
 def X_center_mouse():
-    d = display.Display()
+    d = display.Display('HDMI')
     s = d.screen()
     root = s.root
     width = s.width_in_pixels
