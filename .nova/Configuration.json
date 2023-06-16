@@ -1,0 +1,4 @@
+{
+  "editor.default_syntax" : "python",
+  "python.interpreter" : "\/usr\/bin\/python3"
+}

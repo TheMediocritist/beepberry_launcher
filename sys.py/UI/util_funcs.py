@@ -10,7 +10,7 @@ import subprocess
 #import base64
 #from beeprint import pp
 import string
-from Xlib import X,display
+# from Xlib import X,display
 import config
 from constants   import Width,Height
 
@@ -22,15 +22,16 @@ def get_git_revision_short_hash():
 
 
 def X_center_mouse():
-    d = display.Display()
-    s = d.screen()
-    root = s.root
-    width = s.width_in_pixels
-    height = s.height_in_pixels
-#    print(width,height)
-    root.warp_pointer(width/2,height/2)
-        
-    d.sync()
+#     d = display.Display('HDMI')
+#     s = d.screen()
+#     root = s.root
+#     width = s.width_in_pixels
+#     height = s.height_in_pixels
+# #    print(width,height)
+#     root.warp_pointer(width/2,height/2)
+#         
+#     d.sync()
+    print("Xlib removed")
 
 
 def IsPythonPackage(self,dirname):
