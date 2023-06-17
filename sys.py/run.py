@@ -52,7 +52,7 @@ from libs.DBUS            import setup_dbus
 
 os.environ["DISPLAY"] = ":0"
 os.environ["SDL_FBDEV"] = "/dev/fb1"
-os.environ["SDL_VIDEODRIVER"] = fbcon
+os.environ["SDL_VIDEODRIVER"] = "fbcon"
 
 if not pygame.display.get_init():
     pygame.display.init()
