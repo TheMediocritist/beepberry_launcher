@@ -84,12 +84,13 @@ class TitleBar(Widget):
         return True
 
     def UpdateDownloadStatus(self):
-        resp = RPC.getGlobalStat()
-        
-        if( int(resp["numActive"]) > 0):
-           self._Icons["dlstatus"]._IconIndex = 1
-        elif( int(resp["numActive"]) == 0):
-           self._Icons["dlstatus"]._IconIndex = 0
+        self._Icons["dlstatus"]._IconIndex = 0
+        # resp = RPC.getGlobalStat()
+        # 
+        # if( int(resp["numActive"]) > 0):
+        #    self._Icons["dlstatus"]._IconIndex = 1
+        # elif( int(resp["numActive"]) == 0):
+        #    self._Icons["dlstatus"]._IconIndex = 0
        
     def UpdateWifiStrength(self):
         self.Draw(self._Title)
