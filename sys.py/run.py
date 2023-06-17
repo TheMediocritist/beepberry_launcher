@@ -51,7 +51,7 @@ from UI.skin_manager import MySkinManager
 from libs.DBUS            import setup_dbus
 
 os.environ["DISPLAY"] = ":0"
-os.environ["SDL_FBDEV"] = "/dev/fb1"
+os.environ["SDL_FBDEV"] = "/dev/fb0"
 os.environ["SDL_VIDEODRIVER"] = "fbcon"
 
 if not pygame.display.get_init():
