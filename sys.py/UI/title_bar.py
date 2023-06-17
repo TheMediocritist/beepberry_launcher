@@ -13,15 +13,15 @@ from datetime import datetime
 import alsaaudio
 
 ##local import
-from constants   import ICON_TYPES,Width,Height
-from icon_item   import IconItem
-from multi_icon_item import MultiIconItem
-from icon_pool   import MyIconPool
-from lang_manager import MyLangManager
-from util_funcs  import midRect,SwapAndShow,FileExists
-from skin_manager import MySkinManager
-from widget      import Widget
-from config import Battery,RPC
+from constants          import ICON_TYPES, Width, Height
+from icon_item          import IconItem
+from multi_icon_item    import MultiIconItem
+from icon_pool          import MyIconPool
+from lang_manager       import MyLangManager
+from util_funcs         import midRect, SwapAndShow, FileExists
+from skin_manager       import MySkinManager
+from widget             import Widget
+from config             import Battery, RPC
 
 from libs.roundrects import aa_round_rect
 
@@ -214,6 +214,7 @@ class TitleBar(Widget):
         
         
         start_x = 0
+        print ("made 1")
         self._CanvasHWND = pygame.Surface((self._Width,self._Height))
         self._HWND       = screen
         
