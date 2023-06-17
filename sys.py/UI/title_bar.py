@@ -198,13 +198,13 @@ class TitleBar(Widget):
         pass
     
     def CheckBluetooth(self):
-        out = subprocess.check_output("hcitool dev | grep hci0 |cut -f3")
+        out = subprocess.check_output(['hcitool', 'dev | grep hci0 |cut -f3'])
         if len(out[1]) < 17:
             print("CheckBluetooth:no bluetooth", out)
             self._Icons["bluetooth"]._IconIndex = 2
             return
         else:
-            out = subprocess.check_output("sudo rfkill list | grep hci0 -A 2 | grep yes")
+            out = subprocess.check_output(["sudo rfkill", "list | grep hci0 -A 2 | grep yes"])
             if len(out[1]) > 10:
                 self._Icons["bluetooth"]._IconIndex = 1
                 return
