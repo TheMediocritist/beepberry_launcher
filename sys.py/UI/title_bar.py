@@ -23,9 +23,9 @@ from skin_manager       import MySkinManager
 from widget             import Widget
 from config             import Battery, RPC
 
-from libs.roundrects import aa_round_rect
+from libs.roundrects    import aa_round_rect
 
-from libs.DBUS        import is_wifi_connected_now,wifi_strength
+from libs.DBUS          import is_wifi_connected_now, wifi_strength
 
 icon_base_path = MySkinManager.GiveIcon("gameshell/titlebar_icons/")
 class TitleBar(Widget):
@@ -197,13 +197,13 @@ class TitleBar(Widget):
         pass
     
     def CheckBluetooth(self):
-        out = ""#commands.getstatusoutput("hcitool dev | grep hci0 |cut -f3")
+        out = commands.getstatusoutput("hcitool dev | grep hci0 |cut -f3")
         if len(out[1]) < 17:
             print("CheckBluetooth:no bluetooth", out)
             self._Icons["bluetooth"]._IconIndex = 2
             return
         else:
-            out = ""#commands.getstatusoutput("sudo rfkill list | grep hci0 -A 2 | grep yes")
+            out = commands.getstatusoutput("sudo rfkill list | grep hci0 -A 2 | grep yes")
             if len(out[1]) > 10:
                 self._Icons["bluetooth"]._IconIndex = 1
                 return
